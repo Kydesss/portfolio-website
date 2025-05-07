@@ -19,7 +19,7 @@ jobs:
                   ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
             - name: Test SSH
-              run: ssh -vvv -o StrictHostKeyChecking=no ConnectTimeout=10 ${{ secrets.USER }}@${{ secrets.HOST }} echo "SSH works!"
+              run: ssh -vvv -o StrictHostKeyChecking=no -o ConnectTimeout=10 ${{ secrets.USER }}@${{ secrets.HOST }} echo "SSH works!"
 
             - name: Deploy via SSH
               run: |
