@@ -1,0 +1,9 @@
+.about-image {
+    height: 640px;
+    border-radius: var(--radius-large);
+}
+
+#about {
+    padding: 122px 64px;
+    background-color: #f2f2f2;
+}

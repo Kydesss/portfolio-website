@@ -1,0 +1,19 @@
+#projects {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 112px 64px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.tagline {
+    color: var(--secondary);
+}
+
+.portfolio-text {
+    color: var(--secondary);
+}

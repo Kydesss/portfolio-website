@@ -1,0 +1,83 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "'God Sees All' Piano Cover YouTube Video Thumbnail",
+            "url": "images/God Sees All Thumbnail 3.png",
+            "alt": "Cover picture of Ryan Xiao's YouTube God Sees All Thumbnail",
+            "description": "",
+            "tags": [
+                "YouTube",
+                "Social Media Strategy",
+                "Graphic Design",
+                "Content Creation",
+                "Adobe Photoshop",
+                "Freelance",
+                "2023"
+            ],
+            "path": ""
+        },
+        {
+            "id": 2,
+            "name": "Magic the Gathering: Goats Deck YouTube Video Thumbnail",
+            "url": "images/Goats_Thumbnail.png",
+            "alt": "Cover picture of Ryan Xiao's YouTube God Sees All Thumbnail",
+            "description": "",
+            "tags": [
+                "YouTube",
+                "Social Media Strategy",
+                "Graphic Design",
+                "Content Creation",
+                "Adobe Photoshop",
+                "Freelance",
+                "2023"
+            ],
+            "path": ""
+        },
+        {
+            "id": 3,
+            "name": "UTM FSA Asian Airlines Instagram Post",
+            "url": "images/Asian Airlines v4 P1.png",
+            "alt": "Cover picture of UTM FSA Asian Airlines Event Instagram Post",
+            "description": "",
+            "tags": [
+                "UTMFSA",
+                "Instagram",
+                "Graphic Design",
+                "Adobe Photoshop",
+                "2022"
+            ],
+            "path": "/FSA-Asian-Airlines"
+        },
+        {
+            "id": 4,
+            "name": "UTM FSA Executive Team Election Results Instagram Story Post",
+            "url": "images/FSA Election Results Story No Glow.png",
+            "alt": "Cover picture of UTM FSA Election Results Instagram Story",
+            "description": "",
+            "tags": [
+                "UTMFSA",
+                "Instagram",
+                "Graphic Design",
+                "Adobe Photoshop",
+                "2022"
+            ],
+            "path": ""
+        },
+        {
+            "id": 5,
+            "name": "UTM FSA Kingmaker Documentary Screening Poster",
+            "url": "images/Kingmaker Documentary Screening Poster Final 2.png",
+            "alt": "Cover picture of UTM FSA Kingmaker Documentary Screening Poster",
+            "description": "",
+            "tags": [
+                "UTMFSA",
+                "Instagram",
+                "Graphic Design",
+                "Adobe Photoshop",
+                "2022"
+            ],
+            "path": ""
+        }
+    ]
+}
