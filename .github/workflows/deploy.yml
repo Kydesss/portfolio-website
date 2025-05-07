@@ -18,6 +18,11 @@ jobs:
               with:
                   ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
+            - name: Test Network Connectivity
+              run: |
+                  ping -c 4 ${{ secrets.HOST }}
+                  nslookup ${{ secrets.HOST }}
+
             - name: Test SSH
               run: ssh -vvv -o StrictHostKeyChecking=no ConnectTimeout=10 ${{ secrets.USER }}@${{ secrets.HOST }} echo "SSH works!"
 
@@ -29,3 +34,5 @@ jobs:
                     docker compose build
                     docker compose up -d
                   EOF
+            - name: Cleanup SSH Agent
+              run: ssh-agent -k || true
