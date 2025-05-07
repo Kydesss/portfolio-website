@@ -1,3 +1,52 @@
+# Docker Compose Setup for Multiple Services with Cloudflare Tunnel
+
+This setup allows you to run multiple web services behind a Cloudflare Tunnel, with each service available at its own subdomain of your main domain.
+
+## Services Included
+
+- **Portfolio Website**: A static website served by Nginx, available at https://portfolio.joaquinpacia.com
+- **Affine**: An existing service running at 192.168.2.39:3010, available at https://affine.joaquinpacia.com
+
+## How to Use
+
+1. Make sure Docker and Docker Compose are installed on your system.
+
+2. Start all services:
+   ```
+   docker-compose up -d
+   ```
+
+3. Check if services are running:
+   ```
+   docker-compose ps
+   ```
+
+4. View logs:
+   ```
+   docker-compose logs -f
+   ```
+
+5. Stop all services:
+   ```
+   docker-compose down
+   ```
+
+## Adding a New Service
+
+To add a new service:
+
+1. Add the service to `docker-compose.yml`
+2. Update the `config.yml` file to include the new service in the ingress rules
+3. Add a DNS record in Cloudflare pointing the new subdomain to your tunnel
+
+## Configuration
+
+The Cloudflare tunnel configuration is in `config.yml`. It includes:
+
+- Tunnel ID and token
+- Ingress rules for routing traffic to different services
+- A catch-all rule for handling unknown hostnames
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

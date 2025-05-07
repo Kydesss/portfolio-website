@@ -1,0 +1,7 @@
+services:
+  frontend:
+    build: .
+    container_name: portfolio
+    ports:
+      - "8080:80" # Local access at http://localhost:8080
+    restart: unless-stopped
