@@ -22,7 +22,9 @@ function Card({
     const tagsList = tags.map((tag) => <Tag tag={tag} />);
     return (
         <div className="card-wrapper">
-            <img src={`${image}`} alt={alt} className="img card-img rounded" />
+            <div className="card-image rounded">
+                <img src={`${image}`} alt={alt} className="card-img" />
+            </div>
             <div className="card-content">
                 <div className="card-content-top">
                     <div className="card-content-text">
