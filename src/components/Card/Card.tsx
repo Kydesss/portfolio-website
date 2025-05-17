@@ -23,7 +23,7 @@ function Card({
     return (
         <div className="card-wrapper">
             <div className="card-image rounded">
-                <img src={`${image}`} alt={alt} className="card-img" />
+                <img src={`${image}`} alt={alt} className="" />
             </div>
             <div className="card-content">
                 <div className="card-content-top">

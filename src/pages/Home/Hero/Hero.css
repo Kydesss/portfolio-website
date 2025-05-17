@@ -12,10 +12,9 @@ header {
     text-align: center;
 }
 
-.column-wrapper {
-    max-height: 900px;
-    overflow: hidden;
-}
+/* .column-wrapper {
+    max-height: 600px;
+} */
 
 #contact-button {
     background-color: white;
@@ -39,15 +38,66 @@ header {
     width: 319px;
 }
 
+.preview-column div {
+    height: 340px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-medium);
+    gap: 64px;
+}
+
 #preview-column-left {
     bottom: 152px;
 }
 
 .preview-project-img {
+    /* width: 100%; */
+    /* height: 340px; */
+    /* border-radius: var(--radius-medium); */
+
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-inner {
+    width: 100%;
     height: 340px;
-    flex-shrink: 0;
-    border-radius: var(--radius-medium);
-    gap: 64px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 25px !important;
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 50%;
+    padding: 1em;
+    filter: invert(1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 0 1em;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 992px) {

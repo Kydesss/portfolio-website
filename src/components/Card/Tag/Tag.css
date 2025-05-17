@@ -19,7 +19,7 @@
 .tag-text {
     color: var(--secondary);
     font-family: var(--body-text);
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 21px */
