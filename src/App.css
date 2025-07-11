@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@import "tailwindcss";
 :root {
     --primary: #090702;
     --secondary: #fff;
@@ -15,7 +15,7 @@ h1 {
     font-family: var(--heading-text);
     font-size: 56px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 120%;
     letter-spacing: -0.56px;
 }

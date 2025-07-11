@@ -4,12 +4,12 @@ import jsonProjectsList from "../../../data/projects.json";
 // import { Link } from "react-router";
 
 function Hero() {
-    const projectsList = jsonProjectsList.projects.slice(0, 6)
+    const projectsListPreview = jsonProjectsList.projects.slice(0, 6)
     return (
         <header>
-            <div className="container px-5">
-                <div className="row align-items-center">
-                    <div className="col-12 col-lg-6 px-5" style={{ margin: "64px 0px" }}>
+            <div className="container mx-auto px-5">
+                <div className="flex flex-wrap items-center">
+                    <div className="w-full lg:w-1/2 px-5" style={{ margin: "64px 0px" }}>
                         <div className="profile-picture-img">
                             <img
                                 src="images/JoaquinHeadshot.jpg"
@@ -28,7 +28,7 @@ function Hero() {
                             and delivering innovative solutions. Eager to drive excellence and
                             innovation in any field.
                         </p>
-                        <div className="d-flex flex-row gap-3 mt-4">
+                        <div className="flex flex-row gap-3 mt-4">
                             <HashLink to="#projects" id="projects-button" className="button">
                                 See Projects
                             </HashLink>
@@ -37,40 +37,15 @@ function Hero() {
                             </button>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 px-5 column-wrapper" style={{ margin: "64px 0px" }}>
-                        <div className="row">
-                            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-                                <div className="carousel-inner rounded">
-                                    <div className="carousel-item active">
-                                        <img src={projectsList[0].url} alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={projectsList[1].url} alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={projectsList[2].url} alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={projectsList[3].url} alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={projectsList[4].url} alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src={projectsList[5].url} alt="..." />
-                                    </div>
+                    <div className="w-full lg:w-1/2 px-5 column-wrapper" style={{ margin: "64px 0px" }}>
+                        <div className="flex flex-wrap">
+                            <div className="w-full">
+                                <div className="rounded overflow-hidden">
+                                    <img src={projectsListPreview[0].url} alt="Featured project" className="w-full h-auto object-cover" />
                                 </div>
-                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span className="visually-hidden">Previous</span>
-                                </button>
-                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span className="visually-hidden">Next</span>
-                                </button>
                             </div>
                             {/* <div
-                                className="col-6 d-flex flex-column gap-3 preview-column"
+                                className="w-1/2 flex flex-col gap-3 preview-column"
                                 id="preview-column-left"
                             >
                                 <div>
@@ -94,7 +69,7 @@ function Hero() {
                                 </div>
                             </div>
                             <div
-                                className="col-6 d-flex flex-column gap-3 preview-column"
+                                className="w-1/2 flex flex-col gap-3 preview-column"
                                 id="preview-column-right"
                             >
                                 <div>

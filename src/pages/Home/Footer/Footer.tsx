@@ -5,13 +5,13 @@ import { Link } from "react-router";
 function Footer() {
     return (
         <footer>
-            <div className="container footer-container">
-                <div className="row align-items-center">
-                    <div className="col-lg-4 col-sm-12 footer-logo">
+            <div className="container mx-auto footer-container">
+                <div className="flex flex-wrap items-center">
+                    <div className="w-full lg:w-1/3 sm:w-full footer-logo">
                         <Link to="/">Joaquin Pacia</Link>
                     </div>
-                    <div className="col-lg-4 col-sm-12"></div>
-                    <div className="col-lg-4 col-sm-12">
+                    <div className="w-full lg:w-1/3 sm:w-full"></div>
+                    <div className="w-full lg:w-1/3 sm:w-full">
                         <div className="footer-icons">
                             <Link to="https://www.linkedin.com/in/joaquin-pacia-2551b3259/">
                                 <svg
@@ -51,11 +51,11 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="row gap-5">
-                    <div className="col-12 footer-divider"></div>
-                    <div className="col-12 d-flex flex-column align-items-center">
+                <div className="flex flex-wrap gap-5">
+                    <div className="w-full footer-divider"></div>
+                    <div className="w-full flex flex-col items-center">
                         <p className="footer-text">
-                            © 2025 Joaquin Pacia. Created with React.
+                            &copy; {new Date().getFullYear()} Joaquin Pacia. Created with React.
                         </p>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import jsonProjectsList from "../../../data/projects.json";
 function Projects() {
     const [showMore, setShowMore] = useState(true);
     const projectsList = jsonProjectsList.projects.map((projects) => (
-        <div className="col-lg-4 col-sm-12 mb-4">
+        <div className="w-full lg:w-1/3 sm:w-full mb-4 px-2">
             <Card
                 image={projects.url}
                 alt={projects.alt}
@@ -20,7 +20,7 @@ function Projects() {
     const projectsListPreview = jsonProjectsList.projects
         .slice(0, 3)
         .map((projects) => (
-            <div className="col-lg-4 col-sm-12 mb-4">
+            <div className="w-full lg:w-1/3 sm:w-full mb-4 px-2">
                 <Card
                     image={projects.url}
                     alt={projects.alt}
@@ -34,9 +34,9 @@ function Projects() {
 
     return (
         <section id="projects">
-            <div className="container projects-container">
-                <div className="row">
-                    <div className="col-12 text-center">
+            <div className="container mx-auto projects-container">
+                <div className="flex flex-wrap">
+                    <div className="w-full text-center">
                         <p className="tagline">Portfolio</p>
                         <h2>Projects</h2>
                         <p className="portfolio-text">
@@ -44,11 +44,11 @@ function Projects() {
                         </p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="flex flex-wrap -mx-2">
                     {showMore ? projectsListPreview : projectsList}
                 </div>
-                <div className="row">
-                    <div className="view-all-button col-12 d-flex justify-content-center">
+                <div className="flex flex-wrap">
+                    <div className="view-all-button w-full flex justify-center">
                         <button
                             className="rounded"
                             onClick={() => setShowMore((s) => !s)}
