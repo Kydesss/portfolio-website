@@ -1,8 +1,10 @@
 import "./Hero.css";
 import { HashLink } from "react-router-hash-link";
+import jsonProjectsList from "../../../data/projects.json";
 // import { Link } from "react-router";
 
 function Hero() {
+    const projectsList = jsonProjectsList.projects.slice(0, 6)
     return (
         <header>
             <div className="container px-5">
@@ -40,22 +42,22 @@ function Hero() {
                             <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                                 <div className="carousel-inner rounded">
                                     <div className="carousel-item active">
-                                        <img src="images/God Sees All Thumbnail 3.png" alt="..." />
+                                        <img src={projectsList[0].url} alt="..." />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="images/Goats_Thumbnail.png" alt="..." />
+                                        <img src={projectsList[1].url} alt="..." />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="images/Asian Airlines v4 P1.png" alt="..." />
+                                        <img src={projectsList[2].url} alt="..." />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="images/FSA Election Results Story No Glow.png" alt="..." />
+                                        <img src={projectsList[3].url} alt="..." />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="images/Kingmaker Documentary Screening Poster Final 2.png" alt="..." />
+                                        <img src={projectsList[4].url} alt="..." />
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="images/FSA Coffee House Design 2.jpg" alt="..." />
+                                        <img src={projectsList[5].url} alt="..." />
                                     </div>
                                 </div>
                                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
