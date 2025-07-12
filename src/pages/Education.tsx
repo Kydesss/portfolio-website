@@ -1,4 +1,4 @@
-import educationData from "../data/education.json";
+import { education } from "../data/education.ts";
 
 function Education() {
     const monthNames = [
@@ -15,10 +15,10 @@ function Education() {
         "November",
         "December",
     ];
-    const educationList = educationData.education.map((education) => {
+    const educationList = education.map((education) => {
         const {
             degree,
-            institution: institutionName,
+            institute: institutionName,
             city: cityOfEducation,
             country: countryOfEducation,
             startDate,

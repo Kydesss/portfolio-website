@@ -1,4 +1,4 @@
-import experienceData from "../data/experience.json";
+import { experience } from "../data/experiences.ts";
 
 function Experience() {
     const monthNames = [
@@ -15,7 +15,7 @@ function Experience() {
         "November",
         "December",
     ];
-    const experienceList = experienceData.experiences.map((experience) => {
+    const experienceList = experience.map((experience) => {
         const {
             logo: companyLogo,
             title: jobName,

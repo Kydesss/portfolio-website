@@ -2,6 +2,7 @@ import Header from "./Header.tsx";
 import About from "./About.tsx";
 import Experience from "./Experience.tsx";
 import Education from "./Education.tsx";
+import Projects from "./Projects.tsx";
 function Home() {
     return (
         <div className="min-h-screen text-white">
@@ -39,6 +40,9 @@ function Home() {
                         </div>
                         <div>
                             <Education />
+                        </div>
+                        <div>
+                            <Projects />
                         </div>
                     </main>
                 </div>
