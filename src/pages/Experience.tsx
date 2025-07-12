@@ -31,9 +31,13 @@ function Experience() {
             rawEndDate === "Present" ? new Date() : new Date(rawEndDate);
 
         const experienceLocation = `${organizationName}, ${cityOfExperience}, ${countryOfExperience}`;
+        // Add 1 month to the end date for duration calculation
+        const adjustedEnd = new Date(end);
+        adjustedEnd.setMonth(adjustedEnd.getMonth() + 1);
+
         const totalMonths =
-            (end.getFullYear() - start.getFullYear()) * 12 +
-            (end.getMonth() - start.getMonth());
+            (adjustedEnd.getFullYear() - start.getFullYear()) * 12 +
+            (adjustedEnd.getMonth() - start.getMonth());
         const years = Math.floor(totalMonths / 12);
         const months = totalMonths % 12;
         const yearStr = years > 0 ? `${years} year${years > 1 ? "s" : ""}` : "";
