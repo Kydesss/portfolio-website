@@ -8,11 +8,17 @@ export const projects: Project[] = [
             "images/YouTube/Freelance Ryan/God Sees All Thumbnail 3.png",
         alt: "Cover picture of Ryan Xiao's YouTube God Sees All Thumbnail",
         description: "",
-        hasGitHub: true,
+        hasGitHub: false,
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Collaborated closely with Ryan Xiao to conceptualize a visually compelling thumbnail tailored for his piano cover video, ensuring alignment with his channel's branding and audience preferences.",
+            "Conducted in-depth research on current YouTube thumbnail trends and best practices to maximize click-through rates and audience retention.",
+            "Utilized advanced Adobe Photoshop techniques to enhance the subject's presence, integrate dynamic text overlays, and optimize color schemes for digital platforms.",
+            "Iteratively refined the design based on client feedback, focusing on clarity, visual hierarchy, and overall impact.",
+            "Delivered a polished final design that effectively communicates the video's theme and contributed to the video reaching 730 views on YouTube.",
+        ],
         tags: [
             "YouTube",
             "Social Media Strategy",
@@ -23,7 +29,7 @@ export const projects: Project[] = [
             "2023",
         ],
         imageArray: [],
-        path: "/God-Sees-All-Thumbnail",
+        path: "https://www.youtube.com/watch?v=vu9NOq4hulY",
     },
     {
         name: "Magic the Gathering: Goats Deck YouTube Video Thumbnail",
@@ -34,7 +40,13 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Partnered with Ryan Xiao to design an engaging thumbnail for his Magic the Gathering: Goats Deck YouTube video, targeting increased audience engagement.",
+            "Researched and analyzed YouTube thumbnail trends to inform design decisions and ensure optimal visibility in search results and recommendations.",
+            "Employed Adobe Photoshop to craft a visually dynamic composition, emphasizing the subject and incorporating bold, readable text overlays.",
+            "Iterated on multiple design concepts, incorporating client feedback to achieve a final product that aligns with the channel's branding and content strategy.",
+            "Produced a professional thumbnail that contributed to enhanced video visibility and viewer interaction.",
+        ],
         tags: [
             "YouTube",
             "Social Media Strategy",
@@ -45,7 +57,7 @@ export const projects: Project[] = [
             "2023",
         ],
         imageArray: [],
-        path: "/Goats-Deck-Thumbnail",
+        path: "https://www.youtube.com/watch?v=YK7hiOJMBQs",
     },
     {
         name: "UTM FSA Asian Airlines Event Instagram Post Design",
@@ -56,7 +68,12 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed an Instagram post for the UTM FSA Asian Airlines event, utilizing free icons and Adobe Photoshop to create a visually appealing and informative layout.",
+            "Collaborated with event organizers to ensure the design effectively communicated event details and captured the intended audience's attention.",
+            "Incorporated feedback from the UTM FSA team to refine the design and enhance overall visual impact.",
+            "Contributed to the event's successful promotion, with the post receiving positive feedback from the UTM community.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -65,7 +82,7 @@ export const projects: Project[] = [
             "2022",
         ],
         imageArray: [],
-        path: "/FSA-Asian-Airlines",
+        path: "https://www.instagram.com/p/ClAWrjLte-u/?utm_source=ig_web_button_share_sheet",
     },
     {
         name: "UTM FSA Executive Team Election Results Instagram Story Design",
@@ -75,9 +92,13 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         gitHubURL: "",
-        hasLiveDemo: true,
+        hasLiveDemo: false,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Created an Instagram Story design to announce the UTM FSA Executive Team election results, ensuring clarity and visual appeal.",
+            "Applied branding guidelines and consistent color schemes to maintain organizational identity across social media platforms.",
+            "Optimized layout for mobile viewing, enhancing readability and engagement.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -86,7 +107,7 @@ export const projects: Project[] = [
             "2022",
         ],
         imageArray: [],
-        path: "/FSA-Exec-Election-Results",
+        path: "",
     },
     {
         name: "UTM FSA Kingmaker Documentary Screening Event Instagram Post Design",
@@ -98,7 +119,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed an Instagram post to promote the UTM FSA Kingmaker Documentary Screening event, focusing on clear communication of event details.",
+            "Utilized Adobe Photoshop to create a visually striking poster that aligns with the documentary's theme and the organization's branding.",
+            "Collaborated with event organizers to ensure the design met promotional objectives.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -107,7 +132,7 @@ export const projects: Project[] = [
             "2022",
         ],
         imageArray: [],
-        path: "/FSA-Kingmaker-Documentary",
+        path: "https://www.instagram.com/p/CbYlZInOwdl",
     },
     {
         name: "UTM FSA Coffee House Event Instagram Post Design",
@@ -119,7 +144,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Developed an Instagram post for the UTM FSA Coffee House event, utilizing Adobe Photoshop to create an inviting and cohesive design.",
+            "Ensured the design effectively communicated event information and encouraged student participation.",
+            "Maintained consistency with UTM FSA's visual identity across all promotional materials.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -128,7 +157,7 @@ export const projects: Project[] = [
             "2022",
         ],
         imageArray: [],
-        path: "/FSA-Coffee-House",
+        path: "https://www.instagram.com/p/CZifFcwr2dV",
     },
     {
         name: "UTM FSA Winter 2022 Office Hours Timetable Instagram Post Design",
@@ -140,7 +169,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Created a visually organized Instagram post displaying the UTM FSA Winter 2022 office hours timetable.",
+            "Utilized clear typography and color coding to enhance readability and accessibility for students.",
+            "Ensured the design was consistent with UTM FSA's branding and easily shareable on social media.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -149,7 +182,7 @@ export const projects: Project[] = [
             "2022",
         ],
         imageArray: [],
-        path: "/FSA-Winter-2022-Timetable",
+        path: "https://www.instagram.com/p/CY2bYwjrzui",
     },
     {
         name: "UTM FSA Christmas Fundraiser Instagram Post Design",
@@ -161,7 +194,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed an Instagram post to promote the UTM FSA Christmas Fundraiser, incorporating festive elements and clear calls to action.",
+            "Collaborated with the fundraising team to ensure the design effectively communicated the event's purpose and encouraged donations.",
+            "Optimized the design for maximum engagement and shareability on social media platforms.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -170,27 +207,7 @@ export const projects: Project[] = [
             "2021",
         ],
         imageArray: [],
-        path: "/FSA-Christmas-Fundraiser",
-    },
-    {
-        name: "UTM FSA Executive Team Introduction Instagram Post Designs",
-        coverImageURL: "images/UTMFSA/Exec Intros/External Team Exec Intro.jpg",
-        alt: "Cover picture of UTM FSA Executive External Team Introduction design",
-        description: "",
-        hasGitHub: false,
-        gitHubURL: "",
-        hasLiveDemo: true,
-        category: "Social Media Design",
-        bulletpoints: [],
-        tags: [
-            "UTMFSA",
-            "Instagram",
-            "Graphic Design",
-            "Adobe Photoshop",
-            "2021",
-        ],
-        imageArray: [],
-        path: "/FSA-Exec-Intro",
+        path: "https://www.instagram.com/p/CXHAyD6lGpY",
     },
     {
         name: "UTM FSA Fall 2021 Office Hours Timetable Instagram Post Design",
@@ -201,7 +218,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Developed an Instagram post to display the UTM FSA Fall 2021 office hours timetable, focusing on clarity and accessibility.",
+            "Applied consistent branding and layout principles to ensure information was easily digestible for students.",
+            "Coordinated with the executive team to verify accuracy and completeness of the timetable.",
+        ],
         tags: [
             "UTMFSA",
             "Instagram",
@@ -210,7 +231,31 @@ export const projects: Project[] = [
             "2021",
         ],
         imageArray: [],
-        path: "/FSA-Fall-2021-Timetable",
+        path: "https://www.instagram.com/p/CWjS6UELaAl",
+    },
+    {
+        name: "UTM FSA Executive Team Introduction Instagram Post Designs",
+        coverImageURL: "images/UTMFSA/Exec Intros/External Team Exec Intro.jpg",
+        alt: "Cover picture of UTM FSA Executive External Team Introduction design",
+        description: "",
+        hasGitHub: false,
+        gitHubURL: "",
+        hasLiveDemo: true,
+        category: "Social Media Design",
+        bulletpoints: [
+            "Created a series of Instagram posts introducing the UTM FSA Executive Team, highlighting each member's role and background.",
+            "Ensured visual consistency across all posts, utilizing UTM FSA's color palette and branding elements.",
+            "Collaborated with team members to gather accurate information and present it in an engaging format.",
+        ],
+        tags: [
+            "UTMFSA",
+            "Instagram",
+            "Graphic Design",
+            "Adobe Photoshop",
+            "2021",
+        ],
+        imageArray: [],
+        path: "https://www.instagram.com/p/CWbshgcL1OV",
     },
     {
         name: "Patco Cafe Logo Design",
@@ -221,7 +266,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Brand & Logo Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed a professional logo for Patco Cafe, capturing the brand's identity and values through thoughtful color and typography choices.",
+            "Developed multiple logo concepts and refined the final design based on client feedback.",
+            "Delivered scalable vector assets suitable for both digital and print applications.",
+        ],
         tags: [
             "Client",
             "Mockup",
@@ -243,7 +292,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Print & Poster Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed an event poster for the Western Academy of Beijing Spring Concert Showcase, emphasizing clarity and visual appeal.",
+            "Collaborated with the communications team to ensure the poster effectively promoted the event and adhered to institutional branding.",
+            "Prepared print-ready files and digital versions for distribution across multiple channels.",
+        ],
         tags: [
             "Western Academy of Beijing",
             "Internship",
@@ -266,7 +319,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Social Media Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Collaborated with Las Tres Maria's to design social media graphics for a partnership project, focusing on brand consistency and audience engagement.",
+            "Utilized Adobe Photoshop to create visually appealing content tailored for Facebook and other platforms.",
+            "Worked closely with the client to ensure the final designs met marketing objectives and brand guidelines.",
+        ],
         tags: [
             "Las Tres Marias",
             "Graphic Design",
@@ -280,6 +337,38 @@ export const projects: Project[] = [
         path: "/Las-Tres-Marias-Partnership-Project",
     },
     {
+        name: "Minecraft Server Project",
+        coverImageURL: "",
+        alt: "",
+        description: "",
+        hasGitHub: false,
+        gitHubURL: "",
+        hasLiveDemo: false,
+        category: "Server Management",
+        bulletpoints: [
+            "Led a cross-functional team of 7 members in conceptualizing and constructing event arenas for the school’s Minecraft server, fostering collaboration and creativity.",
+            "Orchestrated and managed 10 bi-weekly PvP events, consistently attracting 15 active participants per event and enhancing community engagement.",
+            "Utilized TeamViewer and Remote Desktop software for efficient server management, troubleshooting, and remote support.",
+            "Developed proficiency in network configuration, including IP addressing and port forwarding, to ensure seamless server connectivity.",
+            "Gained hands-on experience in Linux server resource management, optimizing memory allocation and storage utilization for peak performance.",
+            "Achieved a 20% increase in student engagement and participation in Minecraft-related activities, contributing to a vibrant virtual community.",
+        ],
+        tags: [
+            "Project Management",
+            "Team Leadership",
+            "Event Planning and Execution",
+            "Server Administration",
+            "Network Configuration",
+            "Linux Server Management",
+            "Virtual Community Building",
+            "Problem-solving",
+            "Communication",
+            "Collaboration",
+        ],
+        imageArray: [],
+        path: "/Minecraft-Server-Project",
+    },
+    {
         name: "Las Tres Maria's Food Jar Label Designs",
         coverImageURL:
             "images/Las Tres Marias/Jar Label/14c77e77-7d66-4e72-a3f4-322ca47c6a76_rw_600.jpg",
@@ -289,7 +378,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Brand & Logo Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed a series of food jar labels for Las Tres Maria's, ensuring each label reflected the brand's identity and product uniqueness.",
+            "Utilized Adobe Photoshop and Illustrator to create print-ready designs with attention to color accuracy and typography.",
+            "Collaborated with the client to iterate on design concepts and deliver high-quality final assets.",
+        ],
         tags: [
             "Las Tres Marias",
             "Graphic Design",
@@ -312,7 +405,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Print & Poster Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Created a livestream schedule poster for the Western Academy of Beijing Grin to Win sports event, focusing on clear communication of event times and activities.",
+            "Applied institutional branding and color schemes to ensure consistency across event materials.",
+            "Prepared both digital and print versions for widespread distribution.",
+        ],
         tags: [
             "Western Academy of Beijing",
             "Internship",
@@ -336,7 +433,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Print & Poster Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Designed a Halloween Costume Contest poster for the Western Academy of Beijing HS Student Council, incorporating festive graphics and engaging typography.",
+            "Collaborated with student council members to ensure the poster effectively promoted the event and encouraged participation.",
+            "Delivered print-ready files optimized for both digital and physical display.",
+        ],
         tags: [
             "Western Academy of Beijing",
             "Student Council",
@@ -359,7 +460,11 @@ export const projects: Project[] = [
         gitHubURL: "",
         hasLiveDemo: true,
         category: "Print & Poster Design",
-        bulletpoints: [],
+        bulletpoints: [
+            "Created an advertisement poster for the Perfectly Adequate Band, targeting potential drummers and promoting band recruitment.",
+            "Utilized Adobe Illustrator and Photoshop to design an eye-catching layout with clear messaging.",
+            "Coordinated with band members to ensure the poster accurately represented the group's style and objectives.",
+        ],
         tags: [
             "Perfectly Adequate",
             "Graphic Design",
