@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { experience } from "../data/experiences.ts";
 
 function Experience() {
+    const [showMore, setShowMore] = useState(false);
     const monthNames = [
         "January",
         "February",
@@ -15,7 +17,11 @@ function Experience() {
         "November",
         "December",
     ];
-    const experienceList = experience.map((experience) => {
+
+    // Get experiences based on showMore state
+    const experiencesToShow = showMore ? experience : experience.slice(0, 5);
+
+    const experienceList = experiencesToShow.map((experience) => {
         const {
             logo: companyLogo,
             title: jobName,
@@ -101,6 +107,20 @@ function Experience() {
                     Experience
                 </h2>
                 <div className="space-y-6">{experienceList}</div>
+
+                {/* Show/Hide button only if there are more than 5 experiences */}
+                {experience.length > 5 && (
+                    <div className="flex justify-center mt-8">
+                        <button
+                            className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200"
+                            onClick={() => setShowMore((s) => !s)}
+                        >
+                            {showMore
+                                ? "Show less"
+                                : `See all ${experience.length} experiences`}
+                        </button>
+                    </div>
+                )}
             </section>
         </>
     );
