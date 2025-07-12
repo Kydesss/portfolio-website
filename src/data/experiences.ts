@@ -2,7 +2,6 @@ import { Experience } from "../types/Experience";
 
 export const experience: Experience[] = [
     {
-        id: 1,
         title: "Website & UI/UX Designer",
         startDate: "November 11, 2024",
         endDate: "Present",
@@ -29,7 +28,6 @@ export const experience: Experience[] = [
         logo: "https://evdroptech.ca/wp-content/uploads/2025/03/logo_square_evdrop-1024x614.png",
     },
     {
-        id: 2,
         title: "Content Manager",
         startDate: "October 24, 2024",
         endDate: "May 17, 2025",
@@ -58,7 +56,6 @@ export const experience: Experience[] = [
         logo: "icons/UTM Esports Logo.jpg",
     },
     {
-        id: 3,
         title: "Video Editor",
         startDate: "September 30, 2024",
         endDate: "March 31, 2025",
@@ -85,7 +82,6 @@ export const experience: Experience[] = [
         logo: "https://www.muslimsincanadaarchives.ca/.netlify/images?url=_astro%2Fu_toronto.tCoSNt6R.png",
     },
     {
-        id: 4,
         title: "Freelance Content Editor",
         startDate: "September 1, 2021",
         endDate: "April 1, 2023",
@@ -115,7 +111,6 @@ export const experience: Experience[] = [
         logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fyoutube-app-icon%2Fyoutube-app-icon-22.jpg&f=1&nofb=1&ipt=a4a7277abfa34ea46045331dec9bd4c0a165705e9f9bacdccabb95ae6767f5e2",
     },
     {
-        id: 5,
         title: "Communications Assistant",
         startDate: "September 1, 2021",
         endDate: "April 1, 2023",
@@ -147,7 +142,6 @@ export const experience: Experience[] = [
         logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D100063713251180&f=1&nofb=1&ipt=6b7ed9ec9579e8e452a9b54d22cc069dd3cda38a07fd7a70ac3a9199a5c007d9",
     },
     {
-        id: 6,
         title: "Livestream Director",
         startDate: "September 1, 2020",
         endDate: "June 1, 2021",
@@ -180,7 +174,6 @@ export const experience: Experience[] = [
         logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flibapps-au.s3-ap-southeast-2.amazonaws.com%2Faccounts%2F214136%2Fimages%2FTSEN_logo_official.png&f=1&nofb=1&ipt=3fd16617f2eb54d944f15610594aa16d9ae50da2d6235f66b997eced5d6003a8",
     },
     {
-        id: 7,
         title: "Technology Coordinator",
         startDate: "September 1, 2020",
         endDate: "June 1, 2021",
@@ -213,7 +206,6 @@ export const experience: Experience[] = [
         logo: "https://www.state.gov/wp-content/uploads/2024/08/WAB-logo-2024-2025.jpg",
     },
     {
-        id: 8,
         title: "Technical Project Leader",
         startDate: "September 1, 2020",
         endDate: "June 1, 2021",
@@ -246,7 +238,6 @@ export const experience: Experience[] = [
         logo: "https://www.state.gov/wp-content/uploads/2024/08/WAB-logo-2024-2025.jpg",
     },
     {
-        id: 9,
         title: "Graphic Design Intern",
         startDate: "July 1, 2020",
         endDate: "March 1, 2021",
@@ -277,7 +268,6 @@ export const experience: Experience[] = [
         logo: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D559122052679794&f=1&nofb=1&ipt=cd71c8b0ef9fe4266a4660b178dfe0a9e36da49e4d7889b5a7e955ec144a3b84",
     },
     {
-        id: 10,
         title: "Graphic Design Intern",
         startDate: "December 1, 2019",
         endDate: "March 1, 2021",
