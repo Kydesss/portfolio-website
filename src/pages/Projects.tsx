@@ -1,7 +1,5 @@
 import { useState } from "react";
-import "./Projects.css";
-import Card from "../../../components/Card/Card";
-import jsonProjectsList from "../../../data/projects.json";
+import jsonProjectsList from "../data/projects.json";
 
 function Projects() {
     const [showMore, setShowMore] = useState(true);
