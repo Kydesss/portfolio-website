@@ -21,6 +21,9 @@ function Home() {
                     <div>
                         <Education />
                     </div>
+                    <div>
+                        <Projects />
+                    </div>
                 </main>
             </div>
             {/* Desktop */}
