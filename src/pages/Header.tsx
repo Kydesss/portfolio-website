@@ -12,9 +12,11 @@ function Header() {
                 <h1 className="mb-2 text-white text-4xl font-bold">
                     Joaquin Paolo Pacia
                 </h1>
-                <h2 className="text-xl text-gray-400 mb-4">Content Manager</h2>
+                <h2 className="text-xl text-gray-400 mb-4">
+                    Multimedia Producer
+                </h2>
                 <h3 className="text-lg text-gray-400 mb-4">
-                    📍 Ontario, Canada 🇨🇦
+                    📍 Mississauga, ON Canada 🇨🇦
                 </h3>
                 <p className="text-gray-300 text-sm">
                     Fun is equal to success.
@@ -43,6 +45,8 @@ function Header() {
                 <a
                     className="text-gray-400 hover:text-white"
                     href="https://github.com/Kydesss"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <svg
                         stroke="currentColor"
