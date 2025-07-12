@@ -19,7 +19,7 @@ function Experience() {
     ];
 
     // Get experiences based on showMore state
-    const experiencesToShow = showMore ? experience : experience.slice(0, 5);
+    const experiencesToShow = showMore ? experience : experience.slice(0, 3);
 
     const experienceList = experiencesToShow.map((experience) => {
         const {
@@ -70,10 +70,7 @@ function Experience() {
             )
         );
         const experienceTags = experience.tags.map((tag) => (
-            <span
-                className="inline-block bg-green-500 px-3 py-1.5 text-xs font-medium text-green-500 mr-2 mb-2 rounded-full"
-                style={{ backgroundColor: "rgba(34, 197, 94, 0.3)" }}
-            >
+            <span className="inline-block bg-green-500/30 px-3 py-1.5 text-xs font-medium text-green-500 mr-2 mb-2 rounded-full">
                 {tag}
             </span>
         ));
@@ -109,10 +106,10 @@ function Experience() {
                 <div className="space-y-6">{experienceList}</div>
 
                 {/* Show/Hide button only if there are more than 5 experiences */}
-                {experience.length > 5 && (
+                {experience.length > 3 && (
                     <div className="flex justify-center mt-8">
                         <button
-                            className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors duration-200"
+                            className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors duration-200"
                             onClick={() => setShowMore((s) => !s)}
                         >
                             {showMore

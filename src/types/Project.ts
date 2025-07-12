@@ -6,6 +6,7 @@ export interface Project {
     alt: string;
     description?: string;
     hasGitHub: boolean;
+    gitHubURL: string;
     hasLiveDemo: boolean;
     category: string;
     bulletpoints: string[];
