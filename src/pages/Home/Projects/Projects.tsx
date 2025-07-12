@@ -40,7 +40,11 @@ function Projects() {
                         <p className="tagline">Portfolio</p>
                         <h2>Projects</h2>
                         <p className="portfolio-text">
-                            Explore a selection of my recent projects showcasing my skills in web development, UI/UX design, graphic design, and video production. Each project highlights different technologies and creative solutions I've implemented.
+                            Explore a selection of my recent projects showcasing
+                            my skills in web development, UI/UX design, graphic
+                            design, and video production. Each project
+                            highlights different technologies and creative
+                            solutions I've implemented.
                         </p>
                     </div>
                 </div>

@@ -1,0 +1,70 @@
+{
+    "education": [
+        {
+            "degree": "Honours Bachelor of Arts in Information Technology",
+            "institution": "University of Toronto",
+            "city": "Mississauga",
+            "country": "Canada",
+            "startDate": "September 3, 2021",
+            "endDate": "June 11, 2025 18:30:00",
+            "bulletpoints": [],
+            "courses": [
+                "CCT473 Career Stategies",
+                "CCT320 Communication, Technology, and Social Change",
+                "CCT208 Communications Research Methods",
+                "CCT109 Contemporary Communication Technologies",
+                "WRI173 Creative Non-Fiction",
+                "CCT111 Critical Coding",
+                "CCT204 Design Thinking I",
+                "EDS345 Design Thinking Incubator: From Problem into Prototype",
+                "CCT305 Design and Implementation of Multimedia Documents",
+                "CCT205 Digital Innovation and Cultural Transformation",
+                "CCT453 Digital Media Production II",
+                "CCT353 Digital Media: Video",
+                "CCT432 Ethics and Code",
+                "CCT218 Foundations of Media and Technology Studies",
+                "CCT211 Fundamentals of User Interface Programming",
+                "CCT212 Hacker Culture",
+                "CCT380 Human-Computer Interaction and Communication",
+                "CCT285 Immersive Environment Design",
+                "CCT386 Information Practice in Virtual Worlds: Exploration of Information Environments",
+                "CCT286 Interactive Media Design",
+                "CSC108 Introduction to Computer Programming",
+                "CSC148 Introduction to Computer Science",
+                "EDS275 Mass Media and Debunking the Myths of Education",
+                "CCT222 Political Economy of Communication, Culture and Technology",
+                "CCT110 Rhetoric and Media",
+                "CCT416 Social Data Analytics",
+                "CCT250 Technology and Creative Expression",
+                "EDS285 The Future of EdTech: Active Learning Classrooms and Artificial Intelligence (AI)",
+                "CCT383 The Interactive Society",
+                "CCT478 UX Design - Prototyping and Evaluation",
+                "CCT477 UX Design - Understanding Users",
+                "CCT419 User Experience Design - UXD and Board Games",
+                "CCT260 Web Culture and Design",
+                "CCT360 Web Development and Design II",
+                "CCT460 Web Development and Design III",
+                "ISP100 Writing for University and Beyond"
+            ],
+            "logo": "https://clipground.com/images/university-of-toronto-logo-1.png"
+        },
+        {
+            "degree": "WAB High School Diploma, Capstone 'Distinction' Certificate",
+            "institution": "Western Academy of Beijing",
+            "city": "Beijing",
+            "country": "China",
+            "startDate": "September 1, 2009",
+            "endDate": "June 16, 2021",
+            "bulletpoints": [],
+            "courses": [
+                "Capstone Program: Graphic Design",
+                "IB Information Technology in a Global Society (ITGS) Higher Level (HL)",
+                "IB Film Higher Level (HL)",
+                "IB Design Technology Higher Level (HL)",
+                "IB English A: Language and Literature Standard Level (SL)",
+                "IB Mathematics Applications and Interpretation Standard Level (SL)"
+            ],
+            "logo": "https://www.state.gov/wp-content/uploads/2024/08/WAB-logo-2024-2025.jpg"
+        }
+    ]
+}

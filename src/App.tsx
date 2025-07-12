@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 import AsianAirlines from "./pages/Projects/AsianAirlines/AsianAirlines";
 
 function App() {
