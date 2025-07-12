@@ -84,7 +84,7 @@ function Experience() {
                 <h2 className="text-3xl font-bold mb-6 text-gray-100">
                     Experience
                 </h2>
-                {experienceList}
+                <div className="space-y-6">{experienceList}</div>
             </section>
         </>
     );

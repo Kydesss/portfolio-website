@@ -7,7 +7,12 @@
             "country": "Canada",
             "startDate": "September 3, 2021",
             "endDate": "June 11, 2025 18:30:00",
-            "bulletpoints": [],
+            "bulletpoints": [
+                "Major in Communication, Culture, Information Technology (CCIT)",
+                "Major in Technology, Coding & Society (TCS)",
+                "GPA: 3.5/4.0",
+                "2025 Winter-Dean's List Scholar"
+            ],
             "courses": [
                 "CCT473 Career Stategies",
                 "CCT320 Communication, Technology, and Social Change",
