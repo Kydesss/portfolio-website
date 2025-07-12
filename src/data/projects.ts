@@ -209,7 +209,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         hasLiveDemo: true,
-        category: "Social Media Design",
+        category: "Brand & Logo Design",
         bulletpoints: [],
         tags: [
             "Client",
@@ -230,7 +230,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         hasLiveDemo: true,
-        category: "Social Media Design",
+        category: "Print & Poster Design",
         bulletpoints: [],
         tags: [
             "Western Academy of Beijing",
@@ -274,7 +274,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         hasLiveDemo: true,
-        category: "Social Media Design",
+        category: "Brand & Logo Design",
         bulletpoints: [],
         tags: [
             "Las Tres Marias",
@@ -296,7 +296,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         hasLiveDemo: true,
-        category: "Social Media Design",
+        category: "Print & Poster Design",
         bulletpoints: [],
         tags: [
             "Western Academy of Beijing",
@@ -319,7 +319,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         hasLiveDemo: true,
-        category: "Social Media Design",
+        category: "Print & Poster Design",
         bulletpoints: [],
         tags: [
             "Western Academy of Beijing",
@@ -341,7 +341,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         hasLiveDemo: true,
-        category: "Social Media Design",
+        category: "Print & Poster Design",
         bulletpoints: [],
         tags: [
             "Perfectly Adequate",
