@@ -35,7 +35,7 @@ function Projects() {
                     }}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
                         selectedCategory === category
-                            ? "bg-gray-700 text-white"
+                            ? "bg-stone-800/80 text-white"
                             : " text-gray-400 hover:text-white"
                     }`}
                 >
@@ -56,19 +56,21 @@ function Projects() {
             className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600"
         >
             <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/3">
-                    <img
-                        src={project.coverImageURL}
-                        alt={project.alt}
-                        className="w-full h-48 object-cover rounded-lg"
-                    />
+                <div className="md:w-1/3 flex items-center justify-center">
+                    <div className="w-full max-w-xs aspect-[4/3] bg-stone-800/30 rounded-lg overflow-hidden flex items-center justify-center">
+                        <img
+                            src={project.coverImageURL}
+                            alt={project.alt}
+                            className="w-full h-full object-contain"
+                        />
+                    </div>
                 </div>
                 <div className="md:w-2/3">
                     <h3 className="text-2xl font-semibold mb-3 text-gray-100">
                         {project.name}
                     </h3>
                     <div className="mb-4">
-                        <span className="inline-block bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="inline-block bg-stone-800/80 text-white px-3 py-1 rounded-full text-sm font-medium">
                             {project.category}
                         </span>
                     </div>
@@ -154,7 +156,7 @@ function Projects() {
                 <div className="text-center mt-8">
                     <button
                         onClick={() => setShowMore(!showMore)}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                     >
                         {showMore
                             ? "Show Less"
