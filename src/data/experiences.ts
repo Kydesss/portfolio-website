@@ -28,4 +28,26 @@ export const experience: Experience[] = [
         ],
         logo: "https://evdroptech.ca/wp-content/uploads/2025/03/logo_square_evdrop-1024x614.png",
     },
+    {
+        id: 2,
+        title: "Content Manager",
+        startDate: "October 24, 2024",
+        endDate: "May 17, 2025",
+        name: "UTM Esports Club @ University of Toronto Mississauga",
+        city: "Mississauga",
+        country: "Canada",
+        bulletpoints: [
+            "Managed and scheduled the streaming team and content teams for the UTM Esports club. Determined what kind of streams and content to create for the coming year, and helped with collegiate affairs.",
+            "Directed Twitch livestreams using OBS Studio (Open Broadcasting Software) software to capture gameplay from games such as Valorant and League of Legends, change scenes and overlays, as well as level the audio.",
+        ],
+        tags: [
+            "Content Management",
+            "Livestream Direction",
+            "OBS Studio",
+            "Video Production",
+            "Social Media Strategy",
+            "Team Leadership",
+        ],
+        logo: "icons/UTM Esports Logo.jpg",
+    },
 ];

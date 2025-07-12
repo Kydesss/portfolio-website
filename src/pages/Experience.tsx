@@ -31,18 +31,30 @@ function Experience() {
             rawEndDate === "Present" ? new Date() : new Date(rawEndDate);
 
         const experienceLocation = `${organizationName}, ${cityOfExperience}, ${countryOfExperience}`;
-        const jobDuration = `${
+        const totalMonths =
+            (end.getFullYear() - start.getFullYear()) * 12 +
+            (end.getMonth() - start.getMonth());
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+        const yearStr = years > 0 ? `${years} year${years > 1 ? "s" : ""}` : "";
+        const monthStr =
+            months > 0 ? `${months} month${months > 1 ? "s" : ""}` : "";
+        const durationStr =
+            yearStr && monthStr
+                ? `${yearStr} ${monthStr}`
+                : yearStr || monthStr || "";
+        const jobDateRange = `${
             monthNames[start.getMonth()]
         } ${start.getFullYear()} - ${
             rawEndDate === "Present"
                 ? "Present"
                 : `${monthNames[end.getMonth()]} ${end.getFullYear()}`
-        }`;
+        }${durationStr ? ` (${durationStr})` : ""}`;
 
         const experienceBulletpoints = experience.bulletpoints.map(
             (bulletpoint) => (
                 <li className="flex items-start">
-                    <span className="mr-2 mt-1.5 text-gray-500">•</span>
+                    <span className="mr-2 text-gray-500">•</span>
                     <span>{bulletpoint}</span>
                 </li>
             )
@@ -68,7 +80,7 @@ function Experience() {
                         <p className="text-lg text-gray-300">
                             {experienceLocation}
                         </p>
-                        <p className="text-gray-400">{jobDuration}</p>
+                        <p className="text-gray-400">{jobDateRange}</p>
                     </div>
                 </div>
                 <ul className="space-y-2 text-gray-300 mb-4">
