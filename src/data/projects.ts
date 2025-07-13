@@ -855,7 +855,6 @@ export const projects: Project[] = [
             "2021",
         ],
         imageArray: [
-            "images/Patco Cafe/Patco Cafe Design 1.jpg",
             "images/Patco Cafe/Patco Cafe Design 2.jpg",
             "images/Patco Cafe/Patco Cafe Design 3.jpg",
             "images/Patco Cafe/Patco Cafe Design 4.jpg",
