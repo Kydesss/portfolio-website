@@ -899,7 +899,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         gitHubURL: "",
-        hasLiveDemo: true,
+        hasLiveDemo: false,
         category: "Social Media Design",
         bulletpoints: [
             "Collaborated with Las Tres Maria's to design social media graphics for a partnership project, focusing on brand consistency and audience engagement.",
@@ -915,8 +915,13 @@ export const projects: Project[] = [
             "Adobe Photoshop",
             "2021",
         ],
-        imageArray: [],
-        path: "/Las-Tres-Marias-Partnership-Project",
+        imageArray: [
+            "images/Las Tres Marias/Social Media/Automatic Air Defuser.jpg",
+            "images/Las Tres Marias/Social Media/Electric Air Diffuser.jpg",
+            "images/Las Tres Marias/Social Media/Essential Oil Poster 2.jpg",
+            "images/Las Tres Marias/Social Media/Essential Oil Poster 3.jpg",
+        ],
+        path: "",
     },
     {
         name: "Minecraft Server Project",
@@ -958,7 +963,7 @@ export const projects: Project[] = [
         description: "",
         hasGitHub: false,
         gitHubURL: "",
-        hasLiveDemo: true,
+        hasLiveDemo: false,
         category: "Brand & Logo Design",
         bulletpoints: [
             "Designed a series of food jar labels for Las Tres Maria's, ensuring each label reflected the brand's identity and product uniqueness.",
@@ -974,8 +979,15 @@ export const projects: Project[] = [
             "Adobe Illustrator",
             "2020",
         ],
-        imageArray: [],
-        path: "/Las-Tres-Marias-Food-Jar-Labels",
+        imageArray: [
+            "images/Las Tres Marias/Jar Label/Chili Garlic Spicy Final.jpg",
+            "images/Las Tres Marias/Jar Label/Taba Ng Talangka Regular Final.jpg",
+            "images/Las Tres Marias/Jar Label/Taba Ng Talangka Spicy Final.jpg",
+            "images/Las Tres Marias/Jar Label/Tag Ilo Regular.jpg",
+            "images/Las Tres Marias/Jar Label/Uga Flakes Regular Final.jpg",
+            "images/Las Tres Marias/Jar Label/Uga Flakes Spicy Final.jpg",
+        ],
+        path: "",
     },
     {
         name: "Western Academy of Beijing Grin to Win Sports Event Livestream Schedule Poster Design",

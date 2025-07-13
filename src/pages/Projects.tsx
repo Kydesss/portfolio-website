@@ -207,7 +207,7 @@ function Projects() {
                                     href={project.gitHubURL}
                                     rel="external"
                                     target="_blank"
-                                    className="flex items-center text-gray-300 hover:text-white transition-colors duration-300"
+                                    className="flex items-center bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded text-white transition-colors duration-300"
                                 >
                                     <svg
                                         stroke="currentColor"
@@ -310,7 +310,7 @@ function Projects() {
                                 href={project.gitHubURL}
                                 rel="external"
                                 target="_blank"
-                                className="flex items-center text-gray-300 hover:text-white transition-colors duration-300"
+                                className="flex items-center bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded text-white transition-colors duration-300"
                             >
                                 <svg
                                     stroke="currentColor"
