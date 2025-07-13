@@ -156,15 +156,14 @@ function Projects() {
                                     ></iframe>
                                 </>
                             ) : project.coverImageURL ? (
-                                <a href={project.coverImageURL} target="_blank">
-                                    <div className="aspect-[4/3] group cursor-pointer">
-                                        <img
-                                            src={project.coverImageURL}
-                                            alt={project.alt}
-                                            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                                        />
-                                    </div>
-                                </a>
+                                <div className="aspect-[4/3] group cursor-pointer">
+                                    <img
+                                        src={project.coverImageURL}
+                                        alt={project.alt}
+                                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                                        loading="lazy"
+                                    />
+                                </div>
                             ) : (
                                 <div className="flex flex-col items-center justify-center text-gray-400 p-4">
                                     {project.figmaEmbedUrl ? (
@@ -251,6 +250,7 @@ function Projects() {
                                                         project.name
                                                     } - Image ${i + 1}`}
                                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                    loading="lazy"
                                                 />
                                             </div>
                                         </a>
@@ -279,7 +279,7 @@ function Projects() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 496 512"
                                         className="mr-2"
                                         height="1em"
@@ -301,7 +301,7 @@ function Projects() {
                                     <svg
                                         stroke="currentColor"
                                         fill="currentColor"
-                                        stroke-width="0"
+                                        strokeWidth="0"
                                         viewBox="0 0 512 512"
                                         className="mr-2"
                                         height="1em"
@@ -356,6 +356,7 @@ function Projects() {
                                                     i + 1
                                                 }`}
                                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </a>
@@ -384,7 +385,7 @@ function Projects() {
                                 <svg
                                     stroke="currentColor"
                                     fill="currentColor"
-                                    stroke-width="0"
+                                    strokeWidth="0"
                                     viewBox="0 0 496 512"
                                     className="mr-2"
                                     height="1em"
@@ -406,7 +407,7 @@ function Projects() {
                                 <svg
                                     stroke="currentColor"
                                     fill="currentColor"
-                                    stroke-width="0"
+                                    strokeWidth="0"
                                     viewBox="0 0 512 512"
                                     className="mr-2"
                                     height="1em"

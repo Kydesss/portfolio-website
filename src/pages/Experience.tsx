@@ -21,7 +21,7 @@ function Experience() {
     // Get experiences based on showMore state
     const experiencesToShow = showMore ? experience : experience.slice(0, 3);
 
-    const experienceList = experiencesToShow.map((experience) => {
+    const experienceList = experiencesToShow.map((experience, index) => {
         const {
             logo: companyLogo,
             title: jobName,
@@ -62,23 +62,32 @@ function Experience() {
         }${durationStr ? ` (${durationStr})` : ""}`;
 
         const experienceBulletpoints = experience.bulletpoints.map(
-            (bulletpoint) => (
-                <li className="flex items-start">
+            (bulletpoint, index) => (
+                <li key={index} className="flex items-start">
                     <span className="mr-2 text-gray-500">•</span>
                     <span>{bulletpoint}</span>
                 </li>
             )
         );
-        const experienceTags = experience.tags.map((tag) => (
-            <span className="inline-block bg-green-500/30 px-3 py-1.5 text-xs font-medium text-green-500 mr-2 mb-2 rounded-full">
+        const experienceTags = experience.tags.map((tag, index) => (
+            <span
+                key={index}
+                className="inline-block bg-green-500/30 px-3 py-1.5 text-xs font-medium text-green-500 mr-2 mb-2 rounded-full"
+            >
                 {tag}
             </span>
         ));
         return (
-            <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600">
+            <div
+                key={index}
+                className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600"
+            >
                 <div className="flex items-start mb-2">
                     <div className="bg-white rounded-full p-2 mr-4 w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
-                        <img src={companyLogo} alt="" />
+                        <img
+                            src={companyLogo}
+                            alt={`Picture of ${organizationName} logo`}
+                        />
                     </div>
                     <div className="flex-grow">
                         <h3 className="text-2xl font-semibold text-gray-100">

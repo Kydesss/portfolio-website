@@ -31,7 +31,7 @@ function Header() {
                     <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 384 512"
                         className="mr-2"
                         height="18"
@@ -47,11 +47,12 @@ function Header() {
                     href="https://github.com/Kydesss"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="GitHub Profile Link"
                 >
                     <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 496 512"
                         height="24"
                         width="24"
@@ -63,11 +64,12 @@ function Header() {
                 <a
                     className="text-gray-400 hover:text-white"
                     href="mailto:jpop0393@gmail.com"
+                    aria-label="Email Joaquin"
                 >
                     <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 512 512"
                         height="24"
                         width="24"
@@ -81,11 +83,12 @@ function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white"
+                    aria-label="LinkedIn Profile Link"
                 >
                     <svg
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke-width="0"
+                        strokeWidth="0"
                         viewBox="0 0 448 512"
                         height="24"
                         width="24"

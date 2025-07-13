@@ -15,7 +15,7 @@ function Education() {
         "November",
         "December",
     ];
-    const educationList = education.map((education) => {
+    const educationList = education.map((education, index) => {
         const {
             degree,
             institute: institutionName,
@@ -39,22 +39,31 @@ function Education() {
                 : `${monthNames[end.getMonth()]} ${end.getFullYear()}`
         }`;
 
-        const courses = education.courses.map((course) => (
-            <li className="text-gray-300">• {course}</li>
+        const courses = education.courses.map((course, index) => (
+            <li key={index} className="text-gray-300">
+                • {course}
+            </li>
         ));
         const educationBulletpoints = education.bulletpoints.map(
-            (bulletpoint) => (
-                <li className="flex items-start">
+            (bulletpoint, index) => (
+                <li key={index} className="flex items-start">
                     <span className="mr-2 text-gray-500">•</span>
                     <span>{bulletpoint}</span>
                 </li>
             )
         );
         return (
-            <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600">
+            <div
+                key={index}
+                className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600"
+            >
                 <div className="flex items-start mb-2">
                     <div className="bg-white rounded-full p-2 mr-4 w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
-                        <img src={institutionLogo} alt="" />
+                        <img
+                            src={institutionLogo}
+                            alt={`Picture of ${institutionName} logo`}
+                            loading="lazy"
+                        />
                     </div>
                     <div className="flex-grow">
                         <h3 className="text-2xl font-semibold text-gray-100">
@@ -74,7 +83,7 @@ function Education() {
                         <svg
                             stroke="currentColor"
                             fill="currentColor"
-                            stroke-width="0"
+                            strokeWidth="0"
                             viewBox="0 0 448 512"
                             className="mr-2 inline-block details-open:hidden"
                             height="1em"
