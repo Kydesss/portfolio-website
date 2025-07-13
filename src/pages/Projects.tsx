@@ -1,10 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects } from "../data/projects.ts";
 
 function Projects() {
     const [selectedCategory, setSelectedCategory] = useState<string>("All");
     const [showMore, setShowMore] = useState<boolean>(false);
     const [failedEmbeds, setFailedEmbeds] = useState<Set<number>>(new Set());
+    const [isMobile, setIsMobile] = useState<boolean>(false);
+
+    // Detect mobile device and screen size
+    useEffect(() => {
+        const checkMobile = () => {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isMobileDevice =
+                /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(
+                    userAgent
+                );
+            const isSmallScreen = window.innerWidth <= 768;
+            setIsMobile(isMobileDevice || isSmallScreen);
+        };
+
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     // Get unique categories from projects
     const categories = [
@@ -68,18 +86,56 @@ function Projects() {
                                     <div className="absolute top-2 left-2 z-10 bg-purple-600/90 text-white px-2 py-1 rounded-full text-xs font-medium">
                                         Figma
                                     </div>
-                                    <iframe
-                                        src={project.figmaEmbedUrl}
-                                        title={`${project.name} - Figma Design`}
-                                        className="w-full h-full border-0"
-                                        allowFullScreen
-                                        onError={() => {
-                                            setFailedEmbeds(
-                                                (prev) =>
-                                                    new Set(prev.add(index))
-                                            );
-                                        }}
-                                    ></iframe>
+                                    {isMobile ? (
+                                        // Mobile-friendly fallback - show preview with link instead of iframe
+                                        <div className="w-full h-full flex flex-col items-center justify-center text-gray-300 p-4 bg-stone-800/50 rounded">
+                                            <svg
+                                                className="w-12 h-12 mb-3 text-purple-400"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                            >
+                                                <path d="M15.5 12A3.5 3.5 0 1112 8.5 3.5 3.5 0 0115.5 12z" />
+                                                <path d="M8.5 8.5A3.5 3.5 0 115.5 5 3.5 3.5 0 018.5 8.5z" />
+                                                <path d="M12 19A3.5 3.5 0 008.5 15.5 3.5 3.5 0 0012 12a3.5 3.5 0 00-3.5 3.5A3.5 3.5 0 0012 19z" />
+                                                <path d="M19 12a3.5 3.5 0 01-3.5 3.5H12V8.5h3.5A3.5 3.5 0 0119 12z" />
+                                                <path d="M8.5 15.5A3.5 3.5 0 015 12a3.5 3.5 0 013.5-3.5H12v7h-3.5z" />
+                                            </svg>
+                                            <p className="text-sm text-center mb-3 font-medium">
+                                                Figma Design
+                                            </p>
+                                            <p className="text-xs text-center text-gray-400 mb-3">
+                                                Click to view in Figma
+                                            </p>
+                                            <a
+                                                href={project.figmaEmbedUrl
+                                                    .replace(
+                                                        "embed?embed_host=share&url=",
+                                                        ""
+                                                    )
+                                                    .replace(/%3A/g, ":")
+                                                    .replace(/%2F/g, "/")}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+                                            >
+                                                Open in Figma
+                                            </a>
+                                        </div>
+                                    ) : (
+                                        <iframe
+                                            src={project.figmaEmbedUrl}
+                                            title={`${project.name} - Figma Design`}
+                                            className="w-full h-full border-0"
+                                            allowFullScreen
+                                            loading="lazy"
+                                            onError={() => {
+                                                setFailedEmbeds(
+                                                    (prev) =>
+                                                        new Set(prev.add(index))
+                                                );
+                                            }}
+                                        ></iframe>
+                                    )}
                                 </>
                             ) : project.youtubeVideoId ? (
                                 <>
@@ -87,19 +143,28 @@ function Projects() {
                                         Video
                                     </div>
                                     <iframe
-                                        src={`https://www.youtube.com/embed/${project.youtubeVideoId}`}
+                                        src={`https://www.youtube.com/embed/${
+                                            project.youtubeVideoId
+                                        }${
+                                            isMobile ? "?autoplay=0&rel=0" : ""
+                                        }`}
                                         title={project.name}
                                         className="w-full h-full"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
+                                        loading="lazy"
                                     ></iframe>
                                 </>
                             ) : project.coverImageURL ? (
-                                <img
-                                    src={project.coverImageURL}
-                                    alt={project.alt}
-                                    className="w-full h-full object-contain"
-                                />
+                                <a href={project.coverImageURL} target="_blank">
+                                    <div className="aspect-[4/3] group cursor-pointer">
+                                        <img
+                                            src={project.coverImageURL}
+                                            alt={project.alt}
+                                            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                    </div>
+                                </a>
                             ) : (
                                 <div className="flex flex-col items-center justify-center text-gray-400 p-4">
                                     {project.figmaEmbedUrl ? (
@@ -175,18 +240,20 @@ function Projects() {
                                 </h4>
                                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                     {project.imageArray.map((image, i) => (
-                                        <div
-                                            key={i}
-                                            className="aspect-square bg-stone-800/30 rounded-lg overflow-hidden group cursor-pointer"
-                                        >
-                                            <img
-                                                src={image}
-                                                alt={`${project.name} - Image ${
-                                                    i + 1
-                                                }`}
-                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                            />
-                                        </div>
+                                        <a href={image} target="_blank">
+                                            <div
+                                                key={i}
+                                                className="aspect-square bg-stone-800/30 rounded-lg overflow-hidden group cursor-pointer"
+                                            >
+                                                <img
+                                                    src={image}
+                                                    alt={`${
+                                                        project.name
+                                                    } - Image ${i + 1}`}
+                                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                />
+                                            </div>
+                                        </a>
                                     ))}
                                 </div>
                             </div>
@@ -278,18 +345,20 @@ function Projects() {
                             </h4>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                 {project.imageArray.map((image, i) => (
-                                    <div
-                                        key={i}
-                                        className="aspect-square bg-stone-800/30 rounded-lg overflow-hidden group cursor-pointer"
-                                    >
-                                        <img
-                                            src={image}
-                                            alt={`${project.name} - Image ${
-                                                i + 1
-                                            }`}
-                                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                        />
-                                    </div>
+                                    <a href={image} target="_blank">
+                                        <div
+                                            key={i}
+                                            className="aspect-square bg-stone-800/30 rounded-lg overflow-hidden group cursor-pointer"
+                                        >
+                                            <img
+                                                src={image}
+                                                alt={`${project.name} - Image ${
+                                                    i + 1
+                                                }`}
+                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                            />
+                                        </div>
+                                    </a>
                                 ))}
                             </div>
                         </div>

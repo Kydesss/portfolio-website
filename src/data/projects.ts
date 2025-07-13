@@ -576,7 +576,7 @@ export const projects: Project[] = [
         name: "'God Sees All' Piano Cover YouTube Video Thumbnail",
         coverImageURL:
             "images/YouTube/Freelance Ryan/God Sees All Thumbnail 3.png",
-        youtubeVideoId: "vu9NOq4hulY",
+        // youtubeVideoId: "vu9NOq4hulY",
         alt: "Cover picture of Ryan Xiao's YouTube God Sees All Thumbnail",
         description: "",
         hasGitHub: false,
@@ -605,7 +605,7 @@ export const projects: Project[] = [
     {
         name: "Magic the Gathering: Goats Deck YouTube Video Thumbnail",
         coverImageURL: "images/YouTube/Freelance Ryan/Goats_Thumbnail.png",
-        youtubeVideoId: "YK7hiOJMBQs",
+        // youtubeVideoId: "YK7hiOJMBQs",
         alt: "Cover picture of Ryan Xiao's YouTube God Sees All Thumbnail",
         description: "",
         hasGitHub: false,

@@ -63,7 +63,7 @@ export const experience: Experience[] = [
         city: "Toronto",
         country: "Canada",
         bulletpoints: [
-            "Produced a short video (https://x.com/viraniarif/status/1847271638745710633) for Canada's Minister of Justice and Attorney General Arif Virani's X (Twitter) account using DaVinci Resolve and professional equipment which resulted in the video getting over 2,500 views.",
+            "Produced a short video for Canada's Minister of Justice and Attorney General Arif Virani's X (Twitter) account using DaVinci Resolve and professional equipment which resulted in the video getting over 2,500 views.",
             "Edited four 'MiCA in Conversation' Instagram Reels for the Muslims in Canada Archive (MiCA), featuring interview segments with Professor Aaron Hughes using Adobe Premiere Pro, Canva and DaVinci Resolve. Three of the four Reels achieved over 1,400 views and 60+ likes in total, increasing MiCA's Instagram engagement by 31%.",
             "Edited a short-form video for the 'MiCA in Conversation' Instagram Reels series, featuring a Zoom interview with Ismael Ibrahim Mukhtar and Moska Rokay using Adobe Premiere Pro and Canva.",
         ],
