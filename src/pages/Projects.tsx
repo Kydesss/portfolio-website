@@ -4,12 +4,13 @@ import { projects } from "../data/projects.ts";
 function Projects() {
     const [selectedCategory, setSelectedCategory] = useState<string>("All");
     const [showMore, setShowMore] = useState<boolean>(false);
+    const [failedEmbeds, setFailedEmbeds] = useState<Set<number>>(new Set());
 
     // Get unique categories from projects
     const categories = [
         "All",
         ...new Set(projects.map((project) => project.category)),
-    ];
+    ].sort((a, b) => a.localeCompare(b));
 
     // Filter projects based on selected category
     const filteredProjects =
@@ -55,15 +56,95 @@ function Projects() {
             key={index}
             className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gray-600"
         >
-            {project.coverImageURL !== "" ? (
+            {project.coverImageURL !== "" ||
+            project.youtubeVideoId ||
+            project.figmaEmbedUrl ? (
                 <div className="flex flex-col md:flex-row gap-6">
                     <div className="md:w-1/3 flex items-center justify-center">
-                        <div className="w-full max-w-xs aspect-[4/3] bg-stone-800/30 rounded-lg overflow-hidden flex items-center justify-center">
-                            <img
-                                src={project.coverImageURL}
-                                alt={project.alt}
-                                className="w-full h-full object-contain"
-                            />
+                        <div className="w-full max-w-xs aspect-[4/3] bg-stone-800/30 rounded-lg overflow-hidden flex items-center justify-center relative">
+                            {project.figmaEmbedUrl &&
+                            !failedEmbeds.has(index) ? (
+                                <>
+                                    <div className="absolute top-2 left-2 z-10 bg-purple-600/90 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                        Figma
+                                    </div>
+                                    <iframe
+                                        src={project.figmaEmbedUrl}
+                                        title={`${project.name} - Figma Design`}
+                                        className="w-full h-full border-0"
+                                        allowFullScreen
+                                        onError={() => {
+                                            setFailedEmbeds(
+                                                (prev) =>
+                                                    new Set(prev.add(index))
+                                            );
+                                        }}
+                                    ></iframe>
+                                </>
+                            ) : project.youtubeVideoId ? (
+                                <>
+                                    <div className="absolute top-2 left-2 z-10 bg-red-600/90 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                        Video
+                                    </div>
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${project.youtubeVideoId}`}
+                                        title={project.name}
+                                        className="w-full h-full"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </>
+                            ) : project.coverImageURL ? (
+                                <img
+                                    src={project.coverImageURL}
+                                    alt={project.alt}
+                                    className="w-full h-full object-contain"
+                                />
+                            ) : (
+                                <div className="flex flex-col items-center justify-center text-gray-400 p-4">
+                                    {project.figmaEmbedUrl ? (
+                                        <>
+                                            <svg
+                                                className="w-8 h-8 mb-2"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path d="M15.5 12A3.5 3.5 0 1112 8.5 3.5 3.5 0 0115.5 12zM12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8z" />
+                                            </svg>
+                                            <p className="text-sm text-center">
+                                                Figma embed unavailable
+                                            </p>
+                                            <a
+                                                href={project.figmaEmbedUrl
+                                                    .replace(
+                                                        "embed?embed_host=share&url=",
+                                                        ""
+                                                    )
+                                                    .replace("%3A%2F%2F", "://")
+                                                    .replace("%2F", "/")}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-purple-400 hover:text-purple-300 text-xs mt-1 underline"
+                                            >
+                                                View in Figma
+                                            </a>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <svg
+                                                className="w-8 h-8 mb-2"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17l-3-3 1.5-1.5L9 14l7-7 1.5 1.5L9 17z" />
+                                            </svg>
+                                            <p className="text-sm">
+                                                No preview available
+                                            </p>
+                                        </>
+                                    )}
+                                </div>
+                            )}
                         </div>
                     </div>
                     <div className="md:w-2/3">
@@ -86,6 +167,29 @@ function Projects() {
                                     <li key={i}>{point}</li>
                                 ))}
                             </ul>
+                        )}
+                        {project.imageArray.length > 0 && (
+                            <div className="mb-4">
+                                <h4 className="text-lg font-medium text-gray-200 mb-3">
+                                    Project Gallery
+                                </h4>
+                                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    {project.imageArray.map((image, i) => (
+                                        <div
+                                            key={i}
+                                            className="aspect-square bg-stone-800/30 rounded-lg overflow-hidden group cursor-pointer"
+                                        >
+                                            <img
+                                                src={image}
+                                                alt={`${project.name} - Image ${
+                                                    i + 1
+                                                }`}
+                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         )}
                         <div className="flex flex-wrap gap-2 mb-4">
                             {project.tags.map((tag, i) => (
@@ -167,6 +271,29 @@ function Projects() {
                             ))}
                         </ul>
                     )}
+                    {project.imageArray.length > 0 && (
+                        <div className="mb-4">
+                            <h4 className="text-lg font-medium text-gray-200 mb-3">
+                                Project Gallery
+                            </h4>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                {project.imageArray.map((image, i) => (
+                                    <div
+                                        key={i}
+                                        className="aspect-square bg-stone-800/30 rounded-lg overflow-hidden group cursor-pointer"
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={`${project.name} - Image ${
+                                                i + 1
+                                            }`}
+                                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                     <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.map((tag, i) => (
                             <span
@@ -181,6 +308,8 @@ function Projects() {
                         {project.hasGitHub && (
                             <a
                                 href={project.gitHubURL}
+                                rel="external"
+                                target="_blank"
                                 className="flex items-center text-gray-300 hover:text-white transition-colors duration-300"
                             >
                                 <svg
@@ -201,6 +330,8 @@ function Projects() {
                         {project.hasLiveDemo && (
                             <a
                                 href={project.path}
+                                rel="external"
+                                target="_blank"
                                 className="flex items-center text-purple-500 hover:text-purple-600 transition-colors duration-300"
                             >
                                 <svg

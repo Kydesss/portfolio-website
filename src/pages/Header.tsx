@@ -16,7 +16,7 @@ function Header() {
                     Multimedia Producer
                 </h2>
                 <h3 className="text-lg text-gray-400 mb-4">
-                    📍 Mississauga, ON Canada 🇨🇦
+                    📍 Mississauga, ON, Canada 🇨🇦
                 </h3>
                 <p className="text-gray-300 text-sm">
                     Fun is equal to success.
