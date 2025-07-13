@@ -35,7 +35,7 @@ export const projects: Project[] = [
             "Client Engagement",
             "Professional Audio",
             "Professional Video Equipment",
-            "2023",
+            "2025",
         ],
         imageArray: [],
         path: "https://www.youtube.com/watch?v=xCuUuZXkc1c",
