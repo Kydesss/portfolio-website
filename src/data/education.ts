@@ -3,17 +3,17 @@ import { Education } from "../types/Education";
 
 export const education: Education[] = [
     {
-        degree: "Honours Bachelor of Arts in Information Technology",
+        degree: "Honours Bachelor of Arts",
         institute: "University of Toronto",
         city: "Mississauga",
         country: "Canada",
         startDate: "September 3, 2021",
         endDate: "June 11, 2025 18:30:00",
         bulletpoints: [
-            "Major in Communication, Culture, Information Technology (CCIT)",
-            "Major in Technology, Coding & Society (TCS)",
+            "Graduated with High Distinction, 2025 Winter Dean's List Scholar",
+            "Double Major: Communication, Culture, Information Technology + Technology, Coding & Society",
+            "Relevant Skills: UI/UX design, web development (Python, HTML, CSS, JavaScript), Human-Computer Interaction, interactive media design, digital communication",
             "GPA: 3.5/4.0",
-            "2025 Winter-Dean's List Scholar",
         ],
         courses: [
             "CCT473 Career Stategies (A+)",
@@ -56,15 +56,16 @@ export const education: Education[] = [
         logo: "https://clipground.com/images/university-of-toronto-logo-1.png",
     },
     {
-        degree: "WAB High School Diploma, Capstone 'Distinction' Certificate",
+        degree: "High School Diploma",
         institute: "Western Academy of Beijing",
         city: "Beijing",
         country: "China",
         startDate: "September 1, 2009",
         endDate: "June 16, 2021",
         bulletpoints: [
-            "Capstone Program specializing in Graphic Design",
-            "Capstone ‘Distinction’ Certificate",
+            "Capstone Specialization: Graphic Design with 'Distinction' Certificate",
+            "International Baccalaureate Creativity, Activity & Service (IB CAS) Award",
+            "Recognized for exceptional self-directed learning, project execution, and community engagement",
             "GPA: 3.0/4.0",
         ],
         courses: [
